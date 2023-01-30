@@ -25,11 +25,11 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     {
-      resolve: `gatsby-source-contentful`,
+      resolve: `gatsby-source-prismic`,
       options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        repositoryName: 'https://designheroes.prismic.io/api/v2',
         // Learn about environment variables: https://gatsby.dev/env-vars
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        accessToken: process.env.PRISMIC_ACCESS_TOKEN,
       },
     },
     {

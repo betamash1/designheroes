@@ -28,7 +28,6 @@
     "gatsby-plugin-sharp": "^4.4.0",
     "gatsby-plugin-sitemap": "^5.4.0",
     "gatsby-plugin-styled-components": "^5.4.0",
-    "gatsby-source-prismic": "^9.3.1",
     "gatsby-transformer-sharp": "^4.4.0",
     "gbimage-bridge": "^0.2.0",
     "gsap": "^3.9.0",
@@ -48,5 +47,8 @@
   },
   "bugs": {
     "url": "https://github.com/bagseye/barcadia/issues"
+  },
+  "resolutions": {
+    "node-gyp-build-optional-packages": "4.3.4"
   }
 }

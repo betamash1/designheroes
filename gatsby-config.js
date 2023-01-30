@@ -25,10 +25,18 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     {
-      resolve: `gatsby-source-prismic`,
+      resolve: "gatsby-source-prismic",
       options: {
-        repositoryName: 'https://designheroes.prismic.io/api/v2',
-        // Learn about environment variables: https://gatsby.dev/env-vars
+        repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
+        accessToken: process.env.PRISMIC_ACCESS_TOKEN,
+        customTypesApiToken: process.env.PRISMIC_CUSTOM_TYPES_API_TOKEN,
+        linkResolver: (doc) => linkResolver(doc),
+      },
+    },
+    {
+      resolve: "gatsby-plugin-prismic-previews",
+      options: {
+        repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
         accessToken: process.env.PRISMIC_ACCESS_TOKEN,
       },
     },
